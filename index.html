@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Sky Cinema</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Cinema, Responsive Web, Interactive UI" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #000;
+            color: #f0c14b;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            background-color: #000;
+            border: none;
+            border-radius: 0;
+        }
+
+        .navbar-brand img {
+            height: 50px;
+        }
+
+        .navbar-nav li a {
+            color: #f0c14b !important;
+            font-weight: 600;
+        }
+
+        .navbar-nav li a:hover {
+            color: #fff !important;
+            text-decoration: underline;
+        }
+
+        .hero {
+            position: relative;
+            height: 500px;
+            background: url('sky.png') no-repeat center center;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #f0c14b;
+        }
+
+        .hero h1 {
+            font-size: 3em;
+            font-weight: bold;
+            text-shadow: 2px 2px 8px black;
+        }
+
+        .movie-gallery {
+            padding: 50px 15px;
+            background-color: #111;
+        }
+
+        .movie-gallery h3 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .scrollable-gallery {
+            display: flex;
+            overflow-x: auto;
+            gap: 15px;
+            padding: 10px;
+        }
+
+        .scrollable-gallery img {
+            max-width: 200px;
+            border: 5px solid #f0c14b;
+            border-radius: 5px;
+            transition: transform 0.3s;
+        }
+
+        .scrollable-gallery img:hover {
+            transform: scale(1.1);
+        }
+
+        .section {
+            padding: 50px 15px;
+        }
+
+        .pricing-table {
+            width: 100%;
+            text-align: center;
+            margin: 20px 0;
+            border-collapse: collapse;
+        }
+
+        .pricing-table th, .pricing-table td {
+            border: 1px solid #f0c14b;
+            padding: 10px;
+            color: #fff;
+        }
+
+        .pricing-table th {
+            background-color: #222;
+        }
+
+        .btn {
+            background-color: #222;
+            color: #f0c14b;
+            border: 2px solid #f0c14b;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #f0c14b;
+            color: #000;
+            transition: 0.3s;
+        }
+
+        .footer {
+            background: #111;
+            padding: 20px;
+            text-align: center;
+            color: #f0c14b;
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                height: 300px;
+            }
+
+            .hero h1 {
+                font-size: 2em;
+            }
+
+            .scrollable-gallery img {
+                max-width: 150px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav class="navbar navbar-default">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"><img src="skycinemalogo.png" alt="Sky Cinema"></a>
+        </div>
+        <div class="collapse navbar-collapse" id="navbar">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#movies">Movies</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#reservation">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<div class="hero">
+    <h1>Welcome to Sky Cinema</h1>
+</div>
+
+<!-- Scrollable Movie Gallery -->
+<div id="movies" class="movie-gallery section">
+    <h3>Now Streaming</h3>
+    <div class="scrollable-gallery">
+        <img src="moana2.jpg" alt="Moana">
+        <img src="weekly.jpg" alt="Weekly Highlight">
+        <img src="gladiator2.jpg" alt="Gladiator 2">
+        <img src="today.jpg" alt="Today’s Special">
+        <img src="spiderman.jpg" alt="Spider-Man">
+    </div>
+</div>
+
+<!-- Pricing Section -->
+<div id="pricing" class="pricing">
+    <div class="container">
+        <h2 class="section-title">Ticket Pricing</h2>
+        <table class="pricing-table">
+            <tr>
+                <th>Type</th>
+                <th>2D</th>
+                <th>3D</th>
+            </tr>
+            <tr>
+                <td>Adult</td>
+                <td>R70</td>
+                <td>R85</td>
+            </tr>
+            <tr>
+                <td>Child</td>
+                <td>R50</td>
+                <td>R65</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Services Section -->
+<div id="services" class="section">
+    <h3>Private Screenings</h3>
+    <p>Utilize private screenings to entertain and enlighten your colleagues and clients in an innovative way. Simply choose a movie that fits in with your product or business initiative. From product launches to year-end functions, private screenings are a great way to connect to your market – by either thanking current customers or attracting potential new customers.</p>
+
+    <h3>Group Bookings</h3>
+    <p>Share the thrills, chills, tears, and laughter when you watch the latest movie with your friends, family, or colleagues. A group movie booking is a great option for team outings, school field trips, and more.</p>
+    <ul>
+        <li>Spoiling VIP Clients</li>
+        <li>Rewarding Employees</li>
+        <li>Year-End Functions</li>
+        <li>Special Occasions</li>
+    </ul>
+</div>
+
+<!-- Reservation Section -->
+<div id="reservation" class="reservation">
+    <div class="container">
+        <h2 class="section-title">Book the Cinema</h2>
+        <form>
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter your name">
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter your email">
+            </div>
+            <div class="form-group">
+                <label for="date">Date:</label>
+                <input type="date" class="form-control" id="date">
+            </div>
+            <div class="form-group">
+                <label for="duration">Duration:</label>
+                <select class="form-control" id="duration">
+                    <option>1 Day</option>
+                    <option>2 Days</option>
+                    <option>1 Week</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-block">Submit</button>
+        </form>
+    </div>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+    <p>Contact us at info@skycinema-sa.com or call 018 384 0018. &copy; 2024 Sky Cinema. All Rights Reserved.</p>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</body>
+</html>
